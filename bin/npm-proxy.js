@@ -7,6 +7,7 @@ const package = require('../package.json');
 const toggleProxy = require('../lib/commands/toggleProxy');
 const listProxy = require('../lib/commands/listProxy');
 const useProxy = require('../lib/commands/useProxy');
+const addProxy = require('../lib/commands/addProxy');
 
 program.version(package.version);
 
@@ -34,5 +35,10 @@ program
   .command('use <name>')
   .description('Change current proxy')
   .action(useProxy);
+
+program
+  .command('add <name> <url> [home]')
+  .description('Add custom proxy')
+  .action(addProxy);
 
 program.parse();
