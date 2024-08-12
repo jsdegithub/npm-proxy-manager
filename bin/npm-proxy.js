@@ -8,6 +8,7 @@ const toggleProxy = require('../lib/commands/toggleProxy');
 const listProxy = require('../lib/commands/listProxy');
 const useProxy = require('../lib/commands/useProxy');
 const addProxy = require('../lib/commands/addProxy');
+const delProxy = require('../lib/commands/delProxy');
 
 program.version(package.version);
 
@@ -40,5 +41,13 @@ program
   .command('add <name> <url> [home]')
   .description('Add custom proxy')
   .action(addProxy);
+
+program
+  .command('delete <name>')
+  .alias('del')
+  .alias('remove')
+  .alias('rm')
+  .description('Delete custom proxy')
+  .action(delProxy);
 
 program.parse();
