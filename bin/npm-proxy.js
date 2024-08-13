@@ -4,6 +4,7 @@ const { program } = require('commander');
 
 const package = require('../package.json');
 
+const listCurrentProxy = require('../lib/commands/listCurrentProxy');
 const listProxy = require('../lib/commands/listProxy');
 const useProxy = require('../lib/commands/useProxy');
 const addProxy = require('../lib/commands/addProxy');
@@ -16,6 +17,13 @@ program.version(package.version);
 program.command('open').description('Enable npm proxy').action(openProxy);
 
 program.command('close').description('Disable npm proxy').action(closeProxy);
+
+program
+  .command('current')
+  .alias('cur')
+  .option('-u, --show-url', 'Show the proxy URL instead of the name')
+  .description('Show current proxy name or URL')
+  .action(listCurrentProxy);
 
 program
   .command('list')
@@ -41,4 +49,4 @@ program
   .description('Delete custom proxy')
   .action(delProxy);
 
-program.parse();
+program.parse(process.argv);
