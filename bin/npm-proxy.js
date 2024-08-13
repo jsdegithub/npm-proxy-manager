@@ -4,27 +4,18 @@ const { program } = require('commander');
 
 const package = require('../package.json');
 
-const toggleProxy = require('../lib/commands/toggleProxy');
 const listProxy = require('../lib/commands/listProxy');
 const useProxy = require('../lib/commands/useProxy');
 const addProxy = require('../lib/commands/addProxy');
 const delProxy = require('../lib/commands/delProxy');
+const openProxy = require('../lib/commands/openProxy');
+const closeProxy = require('../lib/commands/closeProxy');
 
 program.version(package.version);
 
-program
-  .command('open')
-  .description('Enable npm proxy')
-  .action(() => {
-    toggleProxy(true);
-  });
+program.command('open').description('Enable npm proxy').action(openProxy);
 
-program
-  .command('close')
-  .description('Disable npm proxy')
-  .action(() => {
-    toggleProxy(false);
-  });
+program.command('close').description('Disable npm proxy').action(closeProxy);
 
 program
   .command('list')
