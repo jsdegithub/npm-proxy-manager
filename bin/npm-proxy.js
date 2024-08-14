@@ -12,6 +12,7 @@ const delProxy = require('../lib/commands/delProxy');
 const openProxy = require('../lib/commands/openProxy');
 const closeProxy = require('../lib/commands/closeProxy');
 const setProxy = require('../lib/commands/setProxy');
+const renameProxy = require('../lib/commands/renameProxy');
 
 program.version(package.version);
 
@@ -54,5 +55,10 @@ program
   .command('set <name> <url> [home]')
   .description('Set an existing proxy url')
   .action(setProxy);
+
+program
+  .command('rename <name> <newName>')
+  .description('Change custom proxy name')
+  .action(renameProxy);
 
 program.parse(process.argv);
