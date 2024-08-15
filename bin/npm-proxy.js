@@ -13,6 +13,7 @@ const openProxy = require('../lib/commands/openProxy');
 const closeProxy = require('../lib/commands/closeProxy');
 const setProxy = require('../lib/commands/setProxy');
 const renameProxy = require('../lib/commands/renameProxy');
+const testProxy = require('../lib/commands/testProxy');
 
 program.version(package.version);
 
@@ -60,5 +61,10 @@ program
   .command('rename <name> <newName>')
   .description('Change custom proxy name')
   .action(renameProxy);
+
+program
+  .command('ping')
+  .description('Show response time for current proxy')
+  .action(testProxy);
 
 program.parse(process.argv);
