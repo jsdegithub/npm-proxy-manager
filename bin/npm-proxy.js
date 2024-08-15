@@ -39,7 +39,7 @@ program
   .action(useProxy);
 
 program
-  .command('add <name> <url> [home]')
+  .command('add <name> <url>')
   .description('Add custom proxy')
   .action(addProxy);
 
@@ -52,7 +52,7 @@ program
   .action(delProxy);
 
 program
-  .command('set <name> <url> [home]')
+  .command('set <name> <url>')
   .description('Set an existing proxy url')
   .action(setProxy);
 
