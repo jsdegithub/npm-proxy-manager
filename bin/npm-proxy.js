@@ -38,13 +38,15 @@ program
 
 program
   .command('use <name>')
+  .option('-p, --proxy', 'use http proxy')
+  .option('-hp, --https-proxy', 'use https proxy')
   .description('change current proxy')
   .action(useProxy);
 
 program
   .command('add <name> [url]')
-  .option('-p, --proxy <proxy>', 'set http proxy')
-  .option('-hp, --https-proxy <httpsProxy>', 'set https proxy')
+  .option('-p, --proxy <proxy>', 'add http proxy')
+  .option('-hp, --https-proxy <httpsProxy>', 'add https proxy')
   .description('add custom proxy')
   .action(addProxy);
 
