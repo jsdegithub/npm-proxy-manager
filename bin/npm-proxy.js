@@ -41,9 +41,9 @@ program
   .action(useProxy);
 
 program
-  .command('add <name> <url>')
-  .option('-p, --proxy', 'set http proxy')
-  .option('-hp, --https-proxy', 'set https proxy')
+  .command('add <name> [url]')
+  .option('-p, --proxy <proxy>', 'set http proxy')
+  .option('-hp, --https-proxy <httpsProxy>', 'set https proxy')
   .description('add custom proxy')
   .action(addProxy);
 
