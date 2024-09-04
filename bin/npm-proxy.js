@@ -23,7 +23,8 @@ program.command('close').description('disable npm proxy').action(closeProxy);
 program
   .command('current')
   .alias('cur')
-  .option('-u, --show-url', 'show the proxy URL instead of the name')
+  .option('-p, --proxy', 'list current http proxy')
+  .option('-hp, --https-proxy', 'list current https proxy')
   .description('show current proxy name or URL')
   .action(listCurrentProxy);
 
