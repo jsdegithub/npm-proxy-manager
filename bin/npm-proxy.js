@@ -59,7 +59,9 @@ program
   .action(delProxy);
 
 program
-  .command('set <name> <url>')
+  .command('set <name> [url]')
+  .option('-p, --proxy <proxy>', 'set http proxy')
+  .option('-hp, --https-proxy <httpsProxy>', 'set https proxy')
   .description('set an existing proxy url')
   .action(setProxy);
 
