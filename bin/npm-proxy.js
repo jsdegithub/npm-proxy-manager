@@ -30,6 +30,8 @@ program
 program
   .command('list')
   .alias('ls')
+  .option('-p, --proxy', 'list http proxy')
+  .option('-hp, --https-proxy', 'list https proxy')
   .description('list all the proxies')
   .action(listProxy);
 
