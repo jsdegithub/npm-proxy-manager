@@ -1,4 +1,4 @@
-# npm-proxy
+# npm-proxy-manager
 
 `npm-proxy-manager` 是一个用于管理 npm 代理的命令行工具，它提供快捷开启、关闭代理等功能。
 
