@@ -2,7 +2,7 @@
 
 `npm-proxy-manager` 是一个用于管理 npm 代理的命令行工具，它提供快捷开启、关闭代理等功能。
 
-`npm-proxy-manager` 以如下方式存储您的自定义代理，通过 npm-proxy use 命令（如：npm-proxy use proxy1），你可以方便地进行切换：
+`npm-proxy-manager` 以如下方式存储您的自定义代理：
 
 ```sh
 [proxy1]
@@ -13,6 +13,8 @@ https-proxy=http://test/https-proxy1
 proxy=http://test/proxy2
 https-proxy=http://test/https-proxy2
 ```
+
+通过 npm-proxy use 命令（如：npm-proxy use proxy1），你可以方便地进行切换；
 
 通过 npm-proxy open 和 npm-proxy close 命令可以更方便地开启与关闭代理。
 
