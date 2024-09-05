@@ -16,7 +16,7 @@ https-proxy=http://test/https-proxy2
 
 通过 npm-proxy use 命令（如：npm-proxy use proxy1），你可以方便地进行切换；
 
-通过 npm-proxy open 和 npm-proxy close 命令可以更方便地开启与关闭代理。
+通过 npm-proxy open 和 npm-proxy close 命令，你可以方便地开启与关闭代理。
 
 ## 安装
 
