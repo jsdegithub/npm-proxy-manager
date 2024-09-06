@@ -23,7 +23,7 @@ https-proxy=http://test/https-proxy2
 请确保你已经安装了 [Node.js](https://nodejs.org/) 和 [npm](https://www.npmjs.com/)，然后运行以下命令来安装依赖：
 
 ```sh
-npm install npm-proxy-manager
+npm install -g npm-proxy-manager
 ```
 
 ## 使用方法
