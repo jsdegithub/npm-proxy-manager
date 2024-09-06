@@ -197,7 +197,7 @@ np ping
 
 ### 提交 Issue
 
-如果你发现了 bug 或者有新的功能建议，请在 [GitHub Issues](https://github.com/jsdegithub/npm-proxy/issues) 页面提交一个 issue。
+如果你发现了 bug 或者有新的功能建议，请在 [GitHub Issues](https://github.com/jsdegithub/npm-proxy-manager/issues) 页面提交一个 issue。
 
 ### 创建 Pull Request
 
