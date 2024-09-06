@@ -16,6 +16,10 @@
     "type": "git",
     "url": "git://github.com/jsdegithub/npm-proxy-manager.git"
   },
+  "keywords": [
+    "npm",
+    "proxy"
+  ],
   "dependencies": {
     "chalk": "4.1.2",
     "commander": "8.3.0",
