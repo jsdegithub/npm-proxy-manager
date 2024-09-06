@@ -16,9 +16,19 @@ const testProxy = require('../lib/commands/testProxy');
 
 program.version(package.version, '-v, --version', 'show version number');
 
-program.command('open').description('enable npm proxy').action(openProxy);
+program
+  .command('open')
+  .option('-p, --proxy', 'open http proxy')
+  .option('-hp, --https-proxy', 'open https proxy')
+  .description('enable npm proxy')
+  .action(openProxy);
 
-program.command('close').description('disable npm proxy').action(closeProxy);
+program
+  .command('close')
+  .option('-p, --proxy', 'close http proxy')
+  .option('-hp, --https-proxy', 'close https proxy')
+  .description('disable npm proxy')
+  .action(closeProxy);
 
 program
   .command('current')

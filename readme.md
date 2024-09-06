@@ -38,12 +38,40 @@ or
 np open
 ```
 
+默认情况下，np open 会同时开启 http proxy 与 https proxy，你可以使用 -p 和 -hp 命令仅开启 http proxy 或 https proxy，如下：
+
+仅开启 http proxy
+
+```sh
+np open -p
+```
+
+仅开启 https proxy
+
+```sh
+np open -hp
+```
+
 ### 关闭代理
 
 ```sh
 npm-proxy close
 or
 np close
+```
+
+默认情况下，np close 会同时关闭 http proxy 与 https proxy，你可以使用 -p 和 -hp 命令仅关闭 http proxy 或 https proxy，如下：
+
+仅关闭 http proxy
+
+```sh
+np close -p
+```
+
+仅关闭 https proxy
+
+```sh
+np close -hp
 ```
 
 ### 列出所有代理
