@@ -74,6 +74,34 @@ np close -p
 np close -hp
 ```
 
+### 添加代理
+
+```sh
+np add <name> <url>
+```
+
+默认情况下，np add \<name> \<url> 会将 \<name> 下的 http proxy 与 https proxy 同时设置为 url，你可以使用 -p 和 -hp 命令仅设置 http proxy 或 https proxy，如下：
+
+仅设置 http proxy
+
+```sh
+np add <name> -p <url>
+```
+
+仅设置 https proxy
+
+```sh
+np add <name> -hp <url>
+```
+
+### 删除代理
+
+```sh
+np delete <name>
+or
+np del <name>
+```
+
 ### 列出所有代理
 
 ```sh
@@ -117,7 +145,9 @@ proxy1 ---- https://test/https-proxy
 proxy2 ---- https://test/https-proxy
 ```
 
-### 使用代理
+### 切换代理
+
+通过 np use \<name> 命令，你可以在事先配置好的代理间方便地切换。
 
 ```sh
 np use <name>
@@ -157,34 +187,6 @@ np cur -p
 
 ```sh
 np cur -hp
-```
-
-### 添加代理
-
-```sh
-np add <name> <url>
-```
-
-默认情况下，np add \<name> \<url> 会将 \<name> 下的 http proxy 与 https proxy 同时设置为 url，你可以使用 -p 和 -hp 命令仅设置 http proxy 或 https proxy，如下：
-
-仅设置 http proxy
-
-```sh
-np add <name> -p <url>
-```
-
-仅设置 https proxy
-
-```sh
-np add <name> -hp <url>
-```
-
-### 删除代理
-
-```sh
-np delete <name>
-or
-np del <name>
 ```
 
 ### 设置代理的 URL
