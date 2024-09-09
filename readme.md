@@ -28,56 +28,14 @@ npm install -g npm-proxy-manager
 
 ## 使用方法
 
-注意：下述命令中，np 是 npm-proxy 的简写，你也可以书写全称。
-
-### 开启代理
-
-```sh
-npm-proxy open
-or
-np open
-```
-
-默认情况下，np open 会同时开启 http proxy 与 https proxy，你可以使用 -p 和 -hp 命令仅开启 http proxy 或 https proxy，如下：
-
-仅开启 http proxy
-
-```sh
-np open -p
-```
-
-仅开启 https proxy
-
-```sh
-np open -hp
-```
-
-### 关闭代理
-
-```sh
-npm-proxy close
-or
-np close
-```
-
-默认情况下，np close 会同时关闭 http proxy 与 https proxy，你可以使用 -p 和 -hp 命令仅关闭 http proxy 或 https proxy，如下：
-
-仅关闭 http proxy
-
-```sh
-np close -p
-```
-
-仅关闭 https proxy
-
-```sh
-np close -hp
-```
+<span style="color: lightblue;">注意：下述命令中，np 是 npm-proxy 的简写，你也可以书写全称。</span>
 
 ### 添加代理
 
 ```sh
 np add <name> <url>
+or
+npm-proxy add <name> <url>
 ```
 
 默认情况下，np add \<name> \<url> 会将 \<name> 下的 http proxy 与 https proxy 同时设置为 url，你可以使用 -p 和 -hp 命令仅设置 http proxy 或 https proxy，如下：
@@ -86,20 +44,16 @@ np add <name> <url>
 
 ```sh
 np add <name> -p <url>
+or
+npm-proxy add <name> -p <url>
 ```
 
 仅设置 https proxy
 
 ```sh
 np add <name> -hp <url>
-```
-
-### 删除代理
-
-```sh
-np delete <name>
 or
-np del <name>
+npm-proxy add <name> -hp <url>
 ```
 
 ### 列出所有代理
@@ -145,7 +99,7 @@ proxy1 ---- https://test/https-proxy
 proxy2 ---- https://test/https-proxy
 ```
 
-### 切换代理
+### 使用（切换）代理
 
 通过 np use \<name> 命令，你可以在事先配置好的代理间方便地切换。
 
@@ -167,26 +121,58 @@ np use <name> -p
 np use <name> -hp
 ```
 
-### 列出当前正在使用的代理
+### 关闭代理
 
 ```sh
-np current
+np close
+```
+
+默认情况下，np close 会同时关闭 http proxy 与 https proxy，你可以使用 -p 和 -hp 命令仅关闭 http proxy 或 https proxy，如下：
+
+仅关闭 http proxy
+
+```sh
+np close -p
+```
+
+仅关闭 https proxy
+
+```sh
+np close -hp
+```
+
+### 开启代理
+
+```sh
+np open
+```
+
+默认情况下，np open 会同时开启 http proxy 与 https proxy，你可以使用 -p 和 -hp 命令仅开启 http proxy 或 https proxy，如下：
+
+仅开启 http proxy
+
+```sh
+np open -p
+```
+
+仅开启 https proxy
+
+```sh
+np open -hp
+```
+
+### 删除代理
+
+```sh
+np delete <name>
 or
-np cur
+np del <name>
 ```
 
-默认情况下，np cur 会同时列举当前正在使用的 http proxy 与 https proxy，你可以使用 -p 和 -hp 命令仅列举 http proxy 或 https proxy，如下：
-
-仅列举当前正在使用的 http proxy
+### 重命名代理
 
 ```sh
-np cur -p
-```
-
-仅列举当前正在使用的 https proxy
-
-```sh
-np cur -hp
+np rename <name> <newName>
 ```
 
 ### 设置代理的 URL
@@ -209,10 +195,26 @@ np set <name> -p <url>
 np set <name> -hp <url>
 ```
 
-### 重命名代理
+### 列出当前正在使用的代理
 
 ```sh
-np rename <name> <newName>
+np current
+or
+np cur
+```
+
+默认情况下，np cur 会同时列举当前正在使用的 http proxy 与 https proxy，你可以使用 -p 和 -hp 命令仅列举 http proxy 或 https proxy，如下：
+
+仅列举当前正在使用的 http proxy
+
+```sh
+np cur -p
+```
+
+仅列举当前正在使用的 https proxy
+
+```sh
+np cur -hp
 ```
 
 ### 测试当前代理的连通性
