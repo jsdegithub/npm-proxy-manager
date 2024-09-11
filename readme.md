@@ -14,9 +14,9 @@ proxy=http://test/proxy2
 https-proxy=http://test/https-proxy2
 ```
 
-通过 `np use` 命令（如：np use proxy1），你可以方便地进行切换；
+**通过 `np use` 命令（如：np use proxy1），你可以方便地进行切换；**
 
-通过 `np open` 和 `np close` 命令，你可以方便地开启与关闭代理。
+**通过 `np open` 和 `np close` 命令，你可以方便地开启与关闭代理。**
 
 ## 安装
 
@@ -36,7 +36,7 @@ npm install -g npm-proxy-manager
 np add <name> <url>
 ```
 
-默认情况下，np add \<name> \<url> 会将 \<name> 下的 http proxy 与 https proxy 同时设置为 url，你可以使用 -p 和 -hp 命令仅设置 http proxy 或 https proxy，如下：
+默认情况下，np add \<name> \<url> 会将 \<name> 下的 http proxy 与 https proxy 同时设置为 \<url>，你可以使用 -p 和 -hp 命令仅设置 http proxy 或 https proxy，如下：
 
 **仅设置 http proxy**
 
