@@ -217,12 +217,6 @@ np cur -p
 np cur -hp
 ```
 
-### 测试当前代理的连通性
-
-```sh
-np ping
-```
-
 ## 贡献
 
 欢迎对本项目进行贡献！如果你有任何建议、问题或发现了 bug，请随时提交 issue 或者创建 pull request。
