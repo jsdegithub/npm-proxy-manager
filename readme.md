@@ -14,9 +14,9 @@ proxy=http://test/proxy2
 https-proxy=http://test/https-proxy2
 ```
 
-**通过 `np use` 命令（如：np use proxy1），你可以方便地进行切换；**
+通过 **np open** 和 **np close** 命令，你可以方便地开启与关闭代理；
 
-**通过 `np open` 和 `np close` 命令，你可以方便地开启与关闭代理。**
+通过 **np use** 命令（如：np use proxy1），你可以方便地切换代理。
 
 ## 安装
 
@@ -26,11 +26,37 @@ https-proxy=http://test/https-proxy2
 npm install -g npm-proxy-manager
 ```
 
+## Example
+
+### 添加自定义代理 proxy1
+
+```sh
+np add proxy1 http://test/proxy1
+```
+
+### 使用代理 proxy1
+
+```sh
+np use proxy1
+```
+
+### 禁用代理
+
+```sh
+np close
+```
+
+### 启用代理（继续使用 proxy1）
+
+```sh
+np open
+```
+
 ## 使用方法
 
 <span style="color: lightblue;">注意：下述命令中，np 是 npm-proxy 的简写，你也可以书写全称。</span>
 
-### 添加代理
+### 添加自定义代理
 
 ```sh
 np add <name> <url>
