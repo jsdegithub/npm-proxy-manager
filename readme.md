@@ -28,25 +28,25 @@ npm install -g npm-proxy-manager
 
 ## Example
 
-### 添加自定义代理 proxy1
+添加自定义代理 proxy1
 
 ```sh
 np add proxy1 http://test/proxy1
 ```
 
-### 使用代理 proxy1
+使用代理 proxy1
 
 ```sh
 np use proxy1
 ```
 
-### 禁用代理
+禁用代理
 
 ```sh
 np close
 ```
 
-### 启用代理（继续使用 proxy1）
+启用代理（继续使用 proxy1）
 
 ```sh
 np open
