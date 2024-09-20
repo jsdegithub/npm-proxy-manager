@@ -34,7 +34,13 @@ npm install -g npm-proxy-manager
 np add proxy1 http://test/proxy1
 ```
 
-使用代理 proxy1
+列出所有已添加的代理
+
+```sh
+np ls
+```
+
+使用（切换）代理 proxy1
 
 ```sh
 np use proxy1
