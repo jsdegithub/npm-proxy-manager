@@ -12,10 +12,6 @@
   },
   "author": "",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jsdegithub/npm-proxy-manager.git"
-  },
   "keywords": [
     "npm",
     "proxy",
